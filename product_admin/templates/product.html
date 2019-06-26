@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<form method="POST" enctype="multipart/form-data" action="{% url 'save_product' %}">
+    {%csrf_token%}
+    <input type="hidden" name='id' value="{{product.id}}">
+    <div class="form-group">
+        <label>Code:</label>
+        <input class="form-control" name='code' value='{{product.code}}'>
+    </div>
+    
+    <div class="form-group">
+        <label>Name:</label>
+        <input class="form-control" name='name'  value='{{product.name}}'>
+    </div>
+    </div>
+    <button type='submit' class="btn btn-primary">Save</button>
+
+</form>

@@ -1,0 +1,13 @@
+<ul>
+    {%for prod in products %}
+        <li>{{prod.name}}
+            <a href='/app1/delete_product/{{prod.id}}'>Delete</a>
+            <a href='{% url "edit_product" prod.id %}'>Edit</a>
+        </li>
+    {%endfor%}
+
+</ul>
+<br>
+<button onclick ='location.href="{% url 'add_product' %}"'>
+Add product 
+</button>  
