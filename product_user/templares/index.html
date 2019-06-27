@@ -1,0 +1,14 @@
+{% pro in products %}
+    {{pro.productId}}
+    {{pro.productName}}
+    {{pro.productPrice}}
+    <br>
+{% endfor %}
+
+<form action="/product_user/product" method="POST">
+    {% csrf_token %}
+    productId: <input productId = "productId"> <br>
+    productName: <input productName = "productName"><br>
+    productPrice: <input productPrice = "productPrice"><br>
+    <input type="submit">
+</form>
